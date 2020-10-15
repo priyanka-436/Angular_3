@@ -1,0 +1,47 @@
+<h1>App</h1>
+
+<input type="text" [(ngModel)]="name"/>
+
+
+<h3> {{name}} </h3>
+
+
+<p *ngIf="p"> Hey I am P1</p>
+
+<p *ngIf="p1"> Hey I am P2</p>
+
+
+
+<div [ngSwitch]="mode">
+    <h1 *ngSwitchCase="'f'">Flight</h1>
+    <h1 *ngSwitchCase="'t'">Train</h1>
+    <h1 *ngSwitchCase="'c'">Car</h1>
+    <h1 *ngSwitchDefault>Others</h1>
+
+
+</div>
+
+<second></second>
+
+<table >
+    <thead>
+    <tr>
+      <th> S.no</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Place</th>
+      
+  
+    </tr>
+    </thead>
+  
+    <tbody *ngFor="let i of users; let j=index">
+    <tr>
+        <td>{{j+1}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.age}}</td>
+    <td>{{i.place}}</td>
+      
+    </tr>
+    </tbody>
+  </table>
